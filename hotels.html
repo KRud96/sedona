@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sedona - hotels</title>
+</head>
+
+<body>
+    <header class="main-header-hotels">
+        <nav class="main-navigation">
+            <div class="main-navigation-wrapper">
+                <div class="container">
+                    <ul class="site-navigation">
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Фото и видео</a></li>
+                        <a class="main-neader-logo" href="index.html">
+                            <img src="./img/logo.svg" width="137" height="68" alt="Логотип сайта Седона">
+                        </a>
+                        <li><a href="index.html#map-state">Карта штата</a></li>
+                        <li><a href="#">Гостиницы</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap">
+        <main class="container">
+            <h1 class="vissually-hidden">Sedona hotels</h1>
+            <section class="hotels-filter">
+                <div class="infrastructer-type-house">
+                    <div class="infrastructer">
+                        <h4> Инфраструктура:</h3>
+                            <p>
+                                <label class="pool-check">
+                                    <input type="checkbox" name="pool" class="vissually-hidden checkbox-infrastructure">
+                                    <span class="checkbox-indicator"></span>
+                                    Бассейн
+                                </label>
+                            </p>
+                            <p>
+                                <label class="park-check">
+                                    <input type="checkbox" name="park" class="vissually-hidden checkbox-infrastructure">
+                                    <span class="checkbox-indicator"></span>
+                                    Парковка
+                                </label>
+                            </p>
+                            <p>
+                                <label class="wifi-check">
+                                    <input type="checkbox" name="wifi" class="vissually-hidden checkbox-infrastructure">
+                                    <span class="checkbox-indicator"></span>
+                                    wi-fi
+                                </label>
+                            </p>
+                    </div>
+                    <div class="type-house">
+                        <h4>Тип жилья:</h3>
+                            <p>
+                                <label class="hotel-check">
+                                    <input type="checkbox" name="hotel" class="vissually-hidden checkbox-type">
+                                    <span class="checkbox-indicator"></span>
+                                    гостиница
+                                </label>
+                            </p>
+                            <p>
+                                <label class="motel-check">
+                                    <input type="checkbox" name="motel" class="vissually-hidden checkbox-type">
+                                    <span class="checkbox-indicator"></span>
+                                    мотель
+                                </label>
+                            </p>
+                            <p>
+                                <label class="apartment-check">
+                                    <input type="checkbox" name="apartment" class="vissually-hidden checkbox-type">
+                                    <span class="checkbox-indicator"></span>
+                                    апартаменты
+                                </label>
+                            </p>
+                    </div>
+                </div>
+                <div class="cost-filter">
+                    <h4>Стоимость в сутки (Р)</h4>
+                    <p class="range-cost">
+                        <span class="decor-costtext">от</span>
+                        <input type="number" min="0" max="100000" value="0">
+                        <span class="line-decor"></span>
+                        <span class="decor-costtext">до</span>
+                        <input type="number" min="0" max="100000" value="5000">
+                    </p>
+                    <div class="slider-background">
+                        <div class="slider-point-line"></div>
+                        <span tabindex="0" id="slider-left" class="slider-point">
+                            <span class="point-center"></span>
+                        </span>
+                        <span tabindex="0" id="slider-right" class="slider-point">
+                            <span class="point-center"></span>
+                        </span>
+                    </div>
+                    <button class="button button-show">Показать</button>
+                </div>
+            </section>
+            <section class="find-filter">
+                <h3 class="vissually-hidden">Найдено</h3>
+                <div class="sorting-container">
+                    <div class="number-find-hotels">
+                        <span>Найдено:</span>
+                        <span id="number-find"></span>
+                    </div>
+                    <div class="sorting">
+                        <p>Сортировка:</p>
+                        <button class="button-filter button-cost">По цене</button>
+                        <button class="button-filter button-type">По типу</button>
+                        <button class="button-filter button-raiting">По рейтингу</button>
+                    </div>
+                </div>
+                <div class="change-sort">
+                    <button class="button-increase hidden">
+                        <img src="./img/hotels/icon-up-dir.svg" alt="">
+                    </button>
+                    <button class="button-reduce hidden">
+                        <img src="./img/hotels/icon-down-dir.svg" alt="">
+                    </button>
+                </div>
+            </section>
+            <section class="hotels-result">
+                <ul class="hotels-list">
+                    <li class="hotels-item hidden">
+                        <div class="hotel-total">
+                            <div class="hotels-avatar">
+                                <img src="" alt="изображение гостиницы">
+                            </div>
+                            <div class="hotels-information">
+                                <h4 class="hotel-name"></h4>
+                                <div class="type-price-line">
+                                    <p class="hotel-type"></p>
+                                    <p class="hotel-price"></p>
+                                </div>
+                                <div class="infrastructure vissually-hidden">
+                                    <p>pool</p>
+                                    <p>park</p>
+                                    <p>wifi</p>
+                                </div>
+                                <div class="hotel-button">
+                                    <a class="button button-additionally" href="">Подробнее</a>
+                                    <a class=" button button-reserv" href="">Забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotels-raiting">
+                            <div class="raiting-stars">
+                                <img src="./img/hotels/star.svg" alt="Звезда рейтинга">
+                                <img src="./img/hotels/star.svg" alt="Звезда рейтинга">
+                                <img src="./img/hotels/star.svg" alt="Звезда рейтинга">
+                                <img src="./img/hotels/star.svg" alt="Звезда рейтинга">
+                                <img src="./img/hotels/star.svg" alt="Звезда рейтинга">
+                            </div>
+                            <p class="raiting-number"></p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+        <hr>
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="main-footer-total">
+                <div class="visitsedona">
+                    <a href="">#VisitSedona</a>
+                </div>
+                <div class="footer-social">
+                    <ul>
+                        <li><a class="social-button" href=""><span class="vissually-hidden">Twitter</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="17" height="15" viewBox="0 0 17 15">
+                                    <path fill="#FFF"
+                                        d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z" />
+                                </svg>
+                            </a></li>
+                        <li><a class="social-button" href=""><span class="vissually-hidden">Facebook</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+                                    <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
+                                </svg></a></li>
+                        <li><a class="social-button" href=""><span class="vissually-hidden">Youtube</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="20" height="16" viewBox="0 0 20 16">
+                                    <path fill="#FFF"
+                                        d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z" />
+                                </svg></a></li>
+                    </ul>
+                </div>
+                <p class="footer-copyright">
+                    <b>Разработано:</b>
+                    <a class="button" href="#"></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="./js/hotels.js/data.js"></script>
+<script src="./js/hotels.js/showHotelList.js"></script>
+<script src="js/hotels.js/clearHotelList.js"></script>
+<script src="./js/hotels.js/filterAdv.js"></script>
+<script src="./js/hotels.js/sortingAdv.js"></script>
+</html>
